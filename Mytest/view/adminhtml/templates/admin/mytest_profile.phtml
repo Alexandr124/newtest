@@ -1,0 +1,15 @@
+<h1><?php
+    echo $block->getConfigTestText().'<br/>';?>
+</h1>
+<h2>
+    <?php
+        foreach ($block->getConfigCountries() as $country) {
+            echo $country.'<br/>';
+        }
+    ?>
+</h2>
+<p>Are you glad ?
+    <?php
+    echo $block->getConfigAreYouGlad().'<br/>';
+    ?>
+</p>

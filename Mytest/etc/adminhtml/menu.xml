@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vaimo_Mytest::main_menu"
+             title="Vaimo Mytest"
+             module="Vaimo_Mytest"
+             sortOrder="0"
+             resource="Vaimo_Mytest::main_menu" />
+        <add id="Vaimo_Mytest::config"
+             title="config"
+             module="Vaimo_Mytest"
+             sortOrder="1000"
+             action="adminhtml/system_config/edit/section/vaimo_mytest"
+             parent="Vaimo_Mytest::main_menu"
+             resource="Vaimo_Mytest::config" />
+        <add id="Vaimo_Mytest::mypage"
+             title="My Page"
+             module="Vaimo_Mytest"
+             sortOrder="1110"
+             action="vaimo_mytest/profile/index"
+             parent="Vaimo_Mytest::main_menu"
+             resource="Vaimo_Mytest::main_menu" />
+    </menu>
+</config>

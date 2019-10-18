@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+    <!--
+    /**
+     * Copyright © Vaimo, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
+    -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+    <css src="Vaimo_Mytest::css/mytest.css" />
+</head>
+<body>
+        <container name = "my.test.conteiner.one" htmlTag="div" htmlClass = "myTestConteinerOne">
+            <block class="Magento\Framework\View\Element\Template" name="vaimo.my.test" template="Vaimo_Mytest::my_test_templates.phtml"/>
+        </container>
+        <container name = "my.test.conteiner.two" htmlTag="div" htmlClass = "MyBlackContainer">
+            <block class="Magento\Framework\View\Element\Template" name="vaimo.my.test.two" template="Vaimo_Mytest::blackContainer.phtml"/>
+        </container>
+        <container name = "my.test.conteiner.three" htmlTag="div" htmlClass = "MyBlackContainer">
+            <block class="Magento\Framework\View\Element\Template" name="vaimo.my.test.three" template="Vaimo_Mytest::blackContainer.phtml"/>
+        </container>
+    <move element="my.test.conteiner.one" destination="content" as="my.test.conteiner.one" before="-"/>
+    <move element="my.test.conteiner.two" destination="content" as="my.test.conteiner.two" before="my.test.conteiner.one"/>
+    <move element="my.test.conteiner.three" destination="my.test.conteiner.one" as="my.test.conteiner.three" after="-"/>
+
+</body>
+</page>
