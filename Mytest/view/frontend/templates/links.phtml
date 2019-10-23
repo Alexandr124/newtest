@@ -1,0 +1,16 @@
+<?php $links = $block->getLinks();?>
+<li class="my_pages_parrent">
+    <span>My pages</span>
+    <ul id="my_pages" class="visbleNo">
+        <?php for($i = 0;$i < count($links);$i++):?>
+            <li class="link"><a href="<?php echo $links[$i]?>">page <?php echo $i;?></a></li>
+        <?php endfor ?>
+    </ul>
+</li>
+<script>
+    document.getElementsByClassName("my_pages_parrent")[0].onclick= function(){
+       var page = document.getElementById("my_pages");
+       page.classList.remove('visbleNo');
+       page.classList.add('visibleYes');
+    };
+</script>

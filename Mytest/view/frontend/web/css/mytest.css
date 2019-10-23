@@ -9,3 +9,23 @@
     margin: 20px;
     text-align: center;
 }
+.linksList{
+    max-width: 100px;
+}
+.my_pages_parrent{
+    position: relative;
+    background-color:rebeccapurple;
+}
+.visbleNo{
+    display: none;
+}
+.visibleYes{
+    display: block;
+    position: absolute;
+}
+.link{
+    width: 50px;
+    background: grey;
+    display:inline-block;
+}
+

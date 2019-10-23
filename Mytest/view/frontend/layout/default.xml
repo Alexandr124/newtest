@@ -11,7 +11,11 @@
     </head>
     <body>
         <referenceContainer name = "header.panel">
-            <block class="Magento\Framework\View\Element\Template" name="vaimo.header.test" template="Vaimo_Mytest::my_test_templates.phtml" before="-" />
-    </referenceContainer>
+            <referenceBlock name="header" remove="true"/>
+        </referenceContainer>
+        <referenceBlock name="header.links">
+        <block class="Vaimo\Mytest\Block\Links\Mylinks" name="vaimo.test.header.links" template="Vaimo_Mytest::links.phtml" before="-" />
+        </referenceBlock>
+
     </body>
 </page>
