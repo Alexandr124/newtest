@@ -1,0 +1,7 @@
+<h2>These products are ended</h2>
+<?php foreach ($block->getProductData() as $item):?>
+    <p class="chose_elebator_buttons">
+        <img src="<?php echo $item->getMyImageUrl()?>" alt="">
+        <a href="<?php echo $item->getProductUrl()?>"><?php echo $item->getName()?></a></p>
+<?php endforeach;?>
+

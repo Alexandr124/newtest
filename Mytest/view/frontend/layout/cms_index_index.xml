@@ -15,6 +15,9 @@
             <container name = "my.test.conteiner.one" htmlTag="div" htmlClass = "myTestConteinerOne">
                 <block class="Magento\Framework\View\Element\Template" name="vaimo.my.test" template="Vaimo_Mytest::my_test_templates.phtml"/>
             </container>
+            <container name = "my.product.list">
+                <block class="Vaimo\Mytest\Block\HomePage\ProductList" name="my.block.product.list" template="Vaimo_Mytest::productList.phtml"/>
+            </container>
         </referenceContainer>
         <move element="my.test.conteiner.one" destination="sidebar.additional" as="my.test.conteiner.one" before="-"/>
     </body>
