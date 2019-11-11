@@ -42,6 +42,7 @@ class Index extends Action
     {
         $page = $this->pageFactory->create();
         $page->getConfig()->getTitle()->prepend((__('My Page 2')));
+
         return $page;
     }
 }

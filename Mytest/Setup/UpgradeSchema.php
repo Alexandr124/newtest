@@ -28,7 +28,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
      */
     public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
-        if (version_compare($context->getVersion(), '1.0.5','<')) {
+        if (version_compare($context->getVersion(), '1.2.5','<')) {
 
             $setup->startSetup();
             $tableElevator = $setup->getConnection()->newTable(
@@ -68,7 +68,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
             )->addColumn(
                 FunnyOrderInterface::FIELD_STATUS,
                 Table::TYPE_BOOLEAN,
-                255, ['default' => 0 ,'nullable' => false],
+                255, ['default' => 1 ,'nullable' => false],
                 'status'
             )->addColumn(
                 FunnyOrderInterface::FIELD_PHONE,

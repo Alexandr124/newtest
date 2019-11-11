@@ -10,8 +10,9 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Vaimo_Mytest::main_menu" title="Vaimo All" translate="title" sortOrder="0">
-                   <resource id="Vaimo_Mytest::config" title="Config" translate="title" sortOrder="100" />
+                    <resource id="Vaimo_Mytest::config" title="Config" translate="title" sortOrder="100"/>
                 </resource>
+                <resource id="Vaimo_Mytest::funnyorder" title="Funny Order" translate="title" sortOrder="100"/>
             </resource>
         </resources>
     </acl>

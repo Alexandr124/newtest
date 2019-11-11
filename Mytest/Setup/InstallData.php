@@ -48,14 +48,14 @@ class InstallData implements InstallDataInterface
      * @param StoreRepository $storeRepository
      */
     public function __construct(StoreManagerInterface $storeManager,
-                                   StoreFactory $storeFactory,
-                                   WebsiteFactory $websiteFactory,
-                                   StoreRepository $storeRepository
+                                StoreFactory $storeFactory,
+                                WebsiteFactory $websiteFactory,
+                                StoreRepository $storeRepository
     ) {
-        $this->storeFactory       = $storeFactory;
-        $this->storeManager       = $storeManager;
-        $this->websiteFactory     = $websiteFactory;
-        $this->storeRepository    = $storeRepository;
+        $this->storeFactory = $storeFactory;
+        $this->storeManager = $storeManager;
+        $this->websiteFactory = $websiteFactory;
+        $this->storeRepository = $storeRepository;
     }
 
     /**
@@ -80,7 +80,7 @@ class InstallData implements InstallDataInterface
             $store->setCode('my_TWO_store_code');
             $store->setName('My TWO store');
             $store->setWebsite($website);
-            $store->setData('is_active','1');
+            $store->setData('is_active', '1');
             $store->setGroupId(1);
             $store->save();
         }

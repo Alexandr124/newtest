@@ -23,6 +23,7 @@ class Mylinks extends Template
     {
         $links[] = '/magento2/vaimo_mytest/testcontroller/index';
         $links[] = '/magento2/vaimo_mytest/secondtest/index';
+
         return $links;
     }
 }

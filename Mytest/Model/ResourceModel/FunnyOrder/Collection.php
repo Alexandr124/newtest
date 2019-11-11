@@ -10,8 +10,15 @@ namespace Vaimo\Mytest\Model\ResourceModel\FunnyOrder;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
+/**
+ * Class Collection
+ * @package Vaimo\Mytest\Model\ResourceModel\FunnyOrder
+ */
 class Collection extends AbstractCollection
 {
+    /**
+     *
+     */
     public function _construct()
     {
         $this->_init(\Vaimo\Mytest\Model\FunnyOrder::class, \Vaimo\Mytest\Model\ResourceModel\FunnyOrder::class);

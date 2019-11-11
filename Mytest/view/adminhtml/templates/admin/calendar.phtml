@@ -1,0 +1,19 @@
+
+<?php
+/**
+ * /Vaimo/Mytest/Block/Adminhtml/Calendar/Calendar $block
+ */
+$disDates = $block->getBusyDay(); ?>
+<div class="field">
+    <input type="text" class="input-text" id="example-date" style="width: auto" name="example-date" />
+</div>
+<script type = "text/x-magento-init">
+{
+         "#example-date":{
+         "Vaimo_Mytest/js/calendarBusyDays":{
+                    "dates" : "<?= $disDates?>"
+         }
+     }
+}
+</script>
+

@@ -19,9 +19,9 @@ use Magento\Directory\Model\CountryFactory;
  */
 class Index extends Template
 {
-    const PASS_ARE_YOU_GLAD     = 'vaimo_mytest2/mytest2/mytest_yes_no';
-    const PASS_TEST_TEXT        = 'vaimo_mytest/general/test_text';
-    const PASS_TEST_COUNTRY     = 'vaimo_mytest/general/test_country';
+    const PASS_ARE_YOU_GLAD = 'vaimo_mytest2/mytest2/mytest_yes_no';
+    const PASS_TEST_TEXT = 'vaimo_mytest/general/test_text';
+    const PASS_TEST_COUNTRY = 'vaimo_mytest/general/test_country';
     /**
      * @var ScopeConfigInterface
      */
@@ -42,7 +42,7 @@ class Index extends Template
     public function __construct(CountryFactory $countryFactory, ScopeConfigInterface $scopeConfig, Context $context, array $data = [])
     {
         $this->countryFactory = $countryFactory;
-        $this->scopeConfig    = $scopeConfig;
+        $this->scopeConfig = $scopeConfig;
         parent::__construct($context, $data);
     }
 
@@ -51,7 +51,11 @@ class Index extends Template
      */
     public function getConfigAreYouGlad()
     {
-        $yesNo = ['No','Yes'];
+        $yesNo = [
+            'No',
+            'Yes'
+        ];
+
         return $yesNo[$this->scopeConfig->getValue($this::PASS_ARE_YOU_GLAD)];
     }
 
@@ -60,15 +64,18 @@ class Index extends Template
      */
     public function getConfigTestText()
     {
-       return $this->scopeConfig->getValue($this::PASS_TEST_TEXT);
+        return $this->scopeConfig->getValue($this::PASS_TEST_TEXT);
     }
+
     /**
      * @param $countryCode
      *
      * @return string
      */
-    private function getCountryName($countryCode){
+    private function getCountryName($countryCode)
+    {
         $country = $this->countryFactory->create()->loadByCode($countryCode);
+
         return $country->getName();
     }
 
@@ -77,12 +84,12 @@ class Index extends Template
      */
     public function getConfigCountries()
     {
-        $countryCodes =explode(',', $this->scopeConfig->getValue($this::PASS_TEST_COUNTRY ));
+        $countryCodes = explode(',', $this->scopeConfig->getValue($this::PASS_TEST_COUNTRY));
         $countryNames = array();
-        foreach ($countryCodes as $countryCode)
-        {
+        foreach ($countryCodes as $countryCode) {
             $countryNames[] = $this->getCountryName($countryCode);
         }
+
         return $countryNames;
     }
 }
